@@ -159,6 +159,16 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   for (var i = 2; i < num; i++){
+      if (num % i === 0){
+          return false;
+      }
+  } 
+  if (num < 2){
+      return false;
+  } else {
+      return true;
+  }
 }
 
 function esVerdadero(valor) {
