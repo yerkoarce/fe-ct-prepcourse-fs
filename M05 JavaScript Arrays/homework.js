@@ -172,7 +172,7 @@ function mesesDelAño(array) {
          mesesPerdidos.push(array[i]);
       }
       }
-   if (mesesPerdidos !== ['Enero','Marzo','Noviembre']){
+   if (mesesPerdidos.length !== 3){
       return 'No se encontraron los meses pedidos';
    }
    return mesesPerdidos;
@@ -183,13 +183,25 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   var tabla6 = [];
+   for (let i = 0; i < 11; i++){
+      tabla6.push(i*6)
+   }
+   return tabla6;
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-}
+   var mayoresCien = [];
+   for (var i = 0 ; i<array.length ; i++){
+      if (array[i] > 100){
+         mayoresCien.push(array[i]);}      
+      }
+      return mayoresCien;
+   }
+
 
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
@@ -202,6 +214,21 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   var arrayNumero = [num+2];
+   var contador = 0;
+   while (contador<9){
+      arrayNumero.push((arrayNumero[arrayNumero.length - 1])+2);
+      contador++;
+      if (contador === arrayNumero[arrayNumero.length - 1]) {
+      break;
+   }
+}
+if (arrayNumero.length === 10){
+   return arrayNumero;
+}else {
+   return 'Se interrumpió la ejecución';
+}
+   
 }
 
 function continueStatement(num) {
@@ -211,6 +238,14 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var arrayNumero = [num+2];
+   var contador = 1;
+   while (contador<10){
+      contador++;
+      if (contador === 5){continue;}
+      arrayNumero.push((arrayNumero[arrayNumero.length - 1])+2);
+   }
+   return arrayNumero;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
