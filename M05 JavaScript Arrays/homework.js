@@ -104,7 +104,7 @@ function multiplicarArgumentos() {
    if (arguments.length = 1){
       return arguments[0];
    }else if (arguments.length = 0){
-      return 0;                                                      //arreglar!!!!!!!!!!!!!!!
+      return 0;                                                     
    }
    for (var i =0; i < arguments.length; i++){
       multiplicados = arguments[i] * multiplicados;
